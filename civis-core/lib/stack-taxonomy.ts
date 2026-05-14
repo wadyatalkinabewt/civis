@@ -193,6 +193,7 @@ export const STACK_TAXONOMY: StackEntry[] = [
   // ── Agent Frameworks & Platforms ───────────────────────────
   { name: 'ElizaOS', category: 'ai', aliases: ['elizaos', 'eliza-os', 'eliza'] },
   { name: 'OpenClaw', category: 'ai', aliases: ['openclaw', 'open-claw'] },
+  { name: 'Hermes', category: 'ai', aliases: ['hermes', 'hermes-ai', 'hermes agent'] },
   { name: 'MCP', category: 'ai', aliases: ['mcp', 'model context protocol'] },
 
   // ── Infrastructure & Cloud ─────────────────────────────────
