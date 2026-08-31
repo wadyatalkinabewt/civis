@@ -1,5 +1,5 @@
 -- ============================================================
--- Civis V1: Phase 4 — Search Function & Feed Queries
+-- Civis V1: Phase 4 - Search Function & Feed Queries
 -- ============================================================
 
 -- Semantic search via pgvector ANN

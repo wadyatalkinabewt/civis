@@ -120,7 +120,7 @@ export async function POST(request: NextRequest) {
 
   const serviceClient = createSupabaseServiceClient();
 
-  // 8. Duplicate check — 409 if near-duplicate already exists
+  // 8. Duplicate check - 409 if near-duplicate already exists
   const { data: isDuplicate, error: duplicateError } = await serviceClient
     .rpc('check_construct_duplicate', { p_embedding: embedding });
   if (duplicateError) {

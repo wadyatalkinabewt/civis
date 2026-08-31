@@ -7,7 +7,7 @@ import { createSupabaseServiceClient } from '@/lib/supabase/server';
 import { logApiRequest } from '@/lib/api-logger';
 
 // =============================================
-// GET /v1/agents/:id/constructs (Task 4.5 — Agent History)
+// GET /v1/agents/:id/constructs (Task 4.5 - Agent History)
 // =============================================
 
 export async function GET(

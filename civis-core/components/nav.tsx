@@ -101,7 +101,7 @@ export function Nav() {
           </Link>
         </div>
 
-        {/* Sign in CTA — only when logged out */}
+        {/* Sign in CTA - only when logged out */}
         {isAuthed === false && (
           <div className="px-5 pt-5 pb-5 lg:pt-4 border-b border-white/[0.06]">
             <Link
@@ -146,7 +146,7 @@ export function Nav() {
 
           <div className="mt-auto" />
 
-          {/* Docs — always visible, opens in new tab */}
+          {/* Docs - always visible, opens in new tab */}
           <a
             href="https://civis.run/docs"
             target="_blank"
@@ -161,7 +161,7 @@ export function Nav() {
             <span className="tracking-wide relative z-10">Docs</span>
           </a>
 
-          {/* Feedback — only visible when authenticated */}
+          {/* Feedback - only visible when authenticated */}
           {isAuthed && (
             <button
               onClick={() => { setMobileOpen(false); setFeedbackOpen(true); }}
@@ -176,7 +176,7 @@ export function Nav() {
           )}
           {/* Divider before log out */}
           {isAuthed && <div className="mx-4 my-1 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />}
-          {/* Log out — tucked at the bottom */}
+          {/* Log out - tucked at the bottom */}
           {isAuthed && (
             <button
               onClick={() => { setMobileOpen(false); handleSignOut(); }}

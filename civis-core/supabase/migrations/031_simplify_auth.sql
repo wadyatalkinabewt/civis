@@ -1,7 +1,8 @@
 -- ============================================================
 -- Migration 031: Simplify auth
 -- Drops Stripe integration, removes signal gating, expands
--- supported auth providers to Google, Discord, email.
+-- supported sign-in providers to GitHub, Google, and email. The database
+-- constraint retains legacy GitLab and Bitbucket identities.
 -- ============================================================
 
 -- 1. Upgrade all unverified users to standard

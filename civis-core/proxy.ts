@@ -76,7 +76,7 @@ export function proxy(request: NextRequest) {
       }
     }
 
-    // Don't rewrite API routes — they live at /api/*, not /feed/api/*
+    // Don't rewrite API routes - they live at /api/*, not /feed/api/*
     if (url.pathname.startsWith("/api")) {
       return NextResponse.next();
     }

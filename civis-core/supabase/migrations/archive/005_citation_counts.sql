@@ -1,5 +1,5 @@
 -- ============================================================
--- Civis V1: Phase 12 — Citation Count Aggregation + Index
+-- Civis V1: Phase 12 - Citation Count Aggregation + Index
 -- ============================================================
 
 -- Aggregate citation counts in SQL instead of fetching all rows

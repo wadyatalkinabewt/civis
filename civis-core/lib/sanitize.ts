@@ -31,6 +31,6 @@ export function sanitizeDeep<T>(value: T): T {
     return sanitized as T;
   }
 
-  // number, boolean, null — pass through
+  // number, boolean, null - pass through
   return value;
 }

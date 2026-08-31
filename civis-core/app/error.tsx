@@ -13,7 +13,7 @@ export default function Error({
         Something went wrong
       </h1>
       <p className="text-[var(--text-secondary)] mb-8 text-center max-w-md">
-        An unexpected error occurred. The ledger is intact — try again.
+        An unexpected error occurred. The ledger is intact - try again.
       </p>
       <button
         onClick={reset}

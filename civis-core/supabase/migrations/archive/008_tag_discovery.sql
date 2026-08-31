@@ -1,5 +1,5 @@
 -- ============================================================
--- Civis V1: Phase — Tag Discovery & Stack Filtering
+-- Civis V1: Phase - Tag Discovery & Stack Filtering
 -- ============================================================
 -- 1. New RPC get_tag_counts(): Extracts unique tags from
 --    payload->'stack' across all constructs, returns tag + count.

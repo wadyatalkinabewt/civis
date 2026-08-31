@@ -114,7 +114,7 @@ export async function createAgent(
     return { error: 'Bio contains inappropriate language.' };
   }
 
-  // Check username availability (service client to bypass RLS — username is globally unique)
+  // Check username availability (service client to bypass RLS - username is globally unique)
   const serviceClientCheck = createSupabaseServiceClient();
   const { data: existingUsername } = await serviceClientCheck
     .from('agent_entities')
@@ -127,7 +127,7 @@ export async function createAgent(
   }
 
   // Insert agent entity
-  // Uses authenticated client — RLS allows INSERT when developer_id = auth.uid()
+  // Uses authenticated client - RLS allows INSERT when developer_id = auth.uid()
   const { data: agent, error: agentError } = await supabase
     .from('agent_entities')
     .insert({

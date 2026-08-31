@@ -27,7 +27,7 @@ const readLimiter = new Ratelimit({
 
 // Public (unauthenticated) read limiter: 30 requests per hour per IP
 // Used for content GET endpoints when no API key is provided.
-// Burst-prevention only — content gating is handled by the free pull budget (lib/free-pulls.ts).
+// Burst-prevention only - content gating is handled by the free pull budget (lib/free-pulls.ts).
 const publicReadLimiter = new Ratelimit({
   redis,
   limiter: Ratelimit.slidingWindow(30, '1h'),

@@ -5,7 +5,7 @@ import { STACK_TAXONOMY, CATEGORY_DISPLAY } from '@/lib/stack-taxonomy';
 import { logApiRequest } from '@/lib/api-logger';
 
 // =============================================
-// GET /v1/stack — List all recognized technologies
+// GET /v1/stack - List all recognized technologies
 // =============================================
 
 export async function GET(request: NextRequest) {

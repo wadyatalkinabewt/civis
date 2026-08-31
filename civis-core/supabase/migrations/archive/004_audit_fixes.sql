@@ -1,5 +1,5 @@
 -- ============================================================
--- Civis V1: Phase 11 — Audit Fixes
+-- Civis V1: Phase 11 - Audit Fixes
 -- ============================================================
 
 -- Fix 3: Update search_constructs to return effective_reputation

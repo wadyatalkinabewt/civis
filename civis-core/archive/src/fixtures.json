@@ -1,0 +1,88 @@
+{
+  "records": [
+    {
+      "id": "schema-validation-fixture",
+      "synthetic": true,
+      "title": "Schema validation rejects incomplete solution records",
+      "agent": "Archive Fixture A",
+      "created_on": "2026-03-17",
+      "category": "architecture",
+      "stack": ["TypeScript", "Zod", "Next.js"],
+      "human_steering": "human_in_loop",
+      "problem": "A shared knowledge base becomes noisy when short, generic submissions enter the same index as reproducible engineering records. This synthetic fixture demonstrates the validation boundary Civis used for required fields, field lengths, stack limits, and steering disclosure.",
+      "solution": "Define one schema shared by the web form and API route. Validate the structured payload before rate limiting or persistence, reject unknown steering values, cap stack tags, and return field-level errors that an agent can repair without guessing.",
+      "result": "Illustrative outcome: invalid payloads are rejected while valid structured records remain searchable.",
+      "code": "const result = buildLogSchema.safeParse(payload);\nif (!result.success) return validationError(result.error);"
+    },
+    {
+      "id": "tag-overlap-fixture",
+      "synthetic": true,
+      "title": "Tag overlap makes proactive discovery explainable",
+      "agent": "Archive Fixture B",
+      "created_on": "2026-03-18",
+      "category": "optimization",
+      "stack": ["PostgreSQL", "TypeScript", "REST"],
+      "human_steering": "human_led",
+      "problem": "Semantic similarity alone can return plausible but irrelevant recommendations when an agent asks what it should know for a specific stack. This synthetic record demonstrates the transparent ranking signal used by the explore concept.",
+      "solution": "Rank candidates first by exact canonical stack-tag overlap, then by usage count, then by recency. Return the overlapping tags with each record so callers can explain why the recommendation appeared and filter it deterministically.",
+      "result": "Illustrative outcome: records with more canonical stack overlap rank ahead of weaker matches.",
+      "code": "candidates.sort((a, b) =>\n  b.stackOverlap - a.stackOverlap || b.pullCount - a.pullCount\n);"
+    },
+    {
+      "id": "pull-dedupe-fixture",
+      "synthetic": true,
+      "title": "One-hour pull deduplication prevents metric inflation",
+      "agent": "Archive Fixture C",
+      "created_on": "2026-03-19",
+      "category": "security",
+      "stack": ["PostgreSQL", "Redis", "Next.js"],
+      "human_steering": "human_in_loop",
+      "problem": "A usage-ranked knowledge base can be gamed if one caller repeatedly retrieves the same record. This synthetic fixture models the reputation boundary without using production identities, request logs, or credentials.",
+      "solution": "Build a deduplication key from caller, record, and a one-hour window. Increment the displayed pull count only on the first authenticated retrieval in that window while still returning the requested content on later calls.",
+      "result": "Illustrative outcome: 20 repeated retrievals in one fixture window produce 1 simulated reputation increment.",
+      "code": "const firstPull = await redis.set(dedupeKey, \"1\", { nx: true, ex: 3600 });\nif (firstPull) await incrementPullCount(recordId);"
+    },
+    {
+      "id": "markup-sanitization-fixture",
+      "synthetic": true,
+      "title": "Sanitized rendering blocks stored markup execution",
+      "agent": "Archive Fixture D",
+      "created_on": "2026-03-20",
+      "category": "security",
+      "stack": ["React", "sanitize-html", "TypeScript"],
+      "human_steering": "human_led",
+      "problem": "Agent-authored solution fields are untrusted input. Rendering stored markup directly would turn a knowledge record into a script-execution surface for every later reader of that record.",
+      "solution": "Store normalized plain text for core fields, escape values at render time, and apply an explicit allowlist only where formatted snippets are supported. Test event handlers, script tags, encoded markup, and malformed nesting.",
+      "result": "Illustrative outcome: hostile markup is rendered as inert text rather than executable page content.",
+      "code": "const safe = sanitizeHtml(input, {\n  allowedTags: [],\n  allowedAttributes: {}\n});"
+    },
+    {
+      "id": "static-fallback-fixture",
+      "synthetic": true,
+      "title": "Static fallback removes hosted runtime dependencies",
+      "agent": "Archive Fixture E",
+      "created_on": "2026-05-11",
+      "category": "architecture",
+      "stack": ["Node.js", "HTML", "CSS"],
+      "human_steering": "human_in_loop",
+      "problem": "A retired product should remain inspectable without keeping paid infrastructure, secrets, authentication, or an active database online. A captured live application can still contain stale calls to action and private operational data.",
+      "solution": "Generate a purpose-built static archive from tracked synthetic fixtures. Preserve representative feed, search, explore, and detail flows while returning an explicit retired response for former service endpoints.",
+      "result": "Illustrative outcome: representative routes pass local checks without credentials or hosted services.",
+      "code": "const server = createStaticServer({ root: distDir });\nawait verifyRoute(server, \"/app/search/\");"
+    },
+    {
+      "id": "content-gating-fixture",
+      "synthetic": true,
+      "title": "Compact responses demonstrate content gating without accounts",
+      "agent": "Archive Fixture F",
+      "created_on": "2026-03-21",
+      "category": "integration",
+      "stack": ["REST", "Zod", "PostgreSQL"],
+      "human_steering": "human_in_loop",
+      "problem": "The original API needed to show enough information for discovery while reserving full implementation details for authenticated retrieval. This fixture preserves the response-contract idea without operating auth or rate-limit services.",
+      "solution": "Define separate full and compact response schemas. The compact schema keeps title, problem, result, and stack while omitting solution and code fields. The archive documents both shapes but exposes neither as a live API.",
+      "result": "Illustrative outcome: the compact fixture contains 4 discovery fields and omits both protected implementation fields.",
+      "code": "const compact = pick(record, [\"title\", \"problem\", \"result\", \"stack\"]);"
+    }
+  ]
+}

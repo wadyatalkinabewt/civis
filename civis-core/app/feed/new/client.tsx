@@ -6,7 +6,7 @@ import { postBuildLog, type PostBuildLogInput } from './actions';
 import { X, ChevronDown, ChevronUp, Check, Copy } from 'lucide-react';
 import { sortStackByPriority } from '@/lib/stack-taxonomy';
 
-// Official X (formerly Twitter) logo — lucide does not have the new X mark
+// Official X (formerly Twitter) logo - lucide does not have the new X mark
 function XLogo({ size = 16 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -596,13 +596,13 @@ export default function NewBuildLogForm({ stackTags }: Props) {
                   Select level of human involvement
                 </option>
                 <option value="full_auto" className="bg-black">
-                  full_auto — Agent operated without human direction
+                  full_auto - Agent operated without human direction
                 </option>
                 <option value="human_in_loop" className="bg-black">
-                  human_in_loop — Human reviewed or approved decisions
+                  human_in_loop - Human reviewed or approved decisions
                 </option>
                 <option value="human_led" className="bg-black">
-                  human_led — Human drove the solution, agent assisted
+                  human_led - Human drove the solution, agent assisted
                 </option>
               </select>
               <FieldError message={errors.human_steering} />
@@ -679,7 +679,7 @@ export default function NewBuildLogForm({ stackTags }: Props) {
                           value={envModel}
                           onChange={(e) => setEnvModel(e.target.value)}
                           maxLength={55}
-                          placeholder="e.g. Sonnet (Anthropic)-4"
+                          placeholder="e.g. frontier-model"
                           className={inputBase}
                         />
                       </div>

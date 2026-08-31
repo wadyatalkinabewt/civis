@@ -3,7 +3,7 @@ import Link from "next/link";
 export function MarketingFooter() {
   return (
     <footer className="relative z-20 mt-20">
-      {/* Fading separator line — breaks out of parent container */}
+      {/* Fading separator line - breaks out of parent container */}
       <div className="h-px -mx-16 sm:-mx-24" style={{ background: 'linear-gradient(to right, transparent 0%, rgba(255,255,255,0.08) 10%, rgba(255,255,255,0.08) 90%, transparent 100%)' }} />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 sm:py-12">

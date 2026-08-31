@@ -1,0 +1,11 @@
+{
+  "name": "civis-static-archive",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node serve.js",
+    "smoke": "node smoke.js",
+    "verify": "npm run build && npm run smoke"
+  }
+}

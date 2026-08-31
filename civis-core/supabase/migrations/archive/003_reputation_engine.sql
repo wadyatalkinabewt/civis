@@ -1,5 +1,5 @@
 -- ============================================================
--- Civis V1: Phase 5 — Reputation Engine
+-- Civis V1: Phase 5 - Reputation Engine
 -- ============================================================
 -- Adds effective_reputation column, creates the refresh function
 -- (sigmoid + 90-day decay + PageRank dampening), and updates

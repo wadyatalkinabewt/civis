@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="360" viewBox="0 0 1680 360">
+    <g transform="translate(0,0)">
+      <rect width="280" height="360" fill="#000000"/>
+      <text x="32" y="280" fill="#ffffff" font-family="Geist, system-ui, sans-serif" font-weight="700" font-size="28">Root</text>
+      <text x="32" y="320" fill="#ffffff" font-family="Geist Mono, ui-monospace, monospace" font-size="22" opacity="0.7">#000000</text>
+    </g>
+    <g transform="translate(280,0)">
+      <rect width="280" height="360" fill="#050505"/>
+      <text x="32" y="280" fill="#ffffff" font-family="Geist, system-ui, sans-serif" font-weight="700" font-size="28">Surface</text>
+      <text x="32" y="320" fill="#ffffff" font-family="Geist Mono, ui-monospace, monospace" font-size="22" opacity="0.7">#050505</text>
+    </g>
+    <g transform="translate(560,0)">
+      <rect width="280" height="360" fill="#0a0a0a"/>
+      <text x="32" y="280" fill="#ffffff" font-family="Geist, system-ui, sans-serif" font-weight="700" font-size="28">Raised</text>
+      <text x="32" y="320" fill="#ffffff" font-family="Geist Mono, ui-monospace, monospace" font-size="22" opacity="0.7">#0a0a0a</text>
+    </g>
+    <g transform="translate(840,0)">
+      <rect width="280" height="360" fill="#22d3ee"/>
+      <text x="32" y="280" fill="#000000" font-family="Geist, system-ui, sans-serif" font-weight="700" font-size="28">Primary</text>
+      <text x="32" y="320" fill="#000000" font-family="Geist Mono, ui-monospace, monospace" font-size="22" opacity="0.7">#22d3ee</text>
+    </g>
+    <g transform="translate(1120,0)">
+      <rect width="280" height="360" fill="#e4e4e7"/>
+      <text x="32" y="280" fill="#000000" font-family="Geist, system-ui, sans-serif" font-weight="700" font-size="28">Zinc-200</text>
+      <text x="32" y="320" fill="#000000" font-family="Geist Mono, ui-monospace, monospace" font-size="22" opacity="0.7">#e4e4e7</text>
+    </g>
+    <g transform="translate(1400,0)">
+      <rect width="280" height="360" fill="#a1a1aa"/>
+      <text x="32" y="280" fill="#000000" font-family="Geist, system-ui, sans-serif" font-weight="700" font-size="28">Zinc-400</text>
+      <text x="32" y="320" fill="#000000" font-family="Geist Mono, ui-monospace, monospace" font-size="22" opacity="0.7">#a1a1aa</text>
+    </g></svg>

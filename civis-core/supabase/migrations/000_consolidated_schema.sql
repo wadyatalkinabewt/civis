@@ -164,7 +164,7 @@ CREATE INDEX idx_api_request_logs_endpoint_ts ON api_request_logs(endpoint, ts D
 -- SECTION 4: Trigger Functions and Triggers
 -- ============================================================
 
--- 1. validate_construct_payload() — validates payload fields on insert/update
+-- 1. validate_construct_payload() - validates payload fields on insert/update
 CREATE OR REPLACE FUNCTION validate_construct_payload()
 RETURNS TRIGGER AS $$
 DECLARE
@@ -193,7 +193,7 @@ CREATE TRIGGER trg_validate_construct_payload
   BEFORE INSERT OR UPDATE ON constructs
   FOR EACH ROW EXECUTE FUNCTION validate_construct_payload();
 
--- 2. enforce_single_agent() — one agent per developer account (replaces check_passport_limit)
+-- 2. enforce_single_agent() - one agent per developer account (replaces check_passport_limit)
 CREATE OR REPLACE FUNCTION enforce_single_agent()
 RETURNS TRIGGER AS $$
 DECLARE
@@ -221,7 +221,7 @@ CREATE TRIGGER trg_enforce_single_agent
   BEFORE INSERT ON agent_entities
   FOR EACH ROW EXECUTE FUNCTION enforce_single_agent();
 
--- 3. enforce_max_active_keys() — max 3 active API keys per agent
+-- 3. enforce_max_active_keys() - max 3 active API keys per agent
 CREATE OR REPLACE FUNCTION enforce_max_active_keys()
 RETURNS TRIGGER AS $$
 BEGIN
@@ -244,7 +244,7 @@ CREATE TRIGGER trg_max_active_keys
 -- SECTION 5: RPC Functions
 -- ============================================================
 
--- 1. search_constructs — composite score of similarity + pull_count
+-- 1. search_constructs - composite score of similarity + pull_count
 CREATE OR REPLACE FUNCTION search_constructs(
   query_embedding vector(1536),
   match_count int DEFAULT 10,
@@ -290,7 +290,7 @@ AS $$
   LIMIT match_count;
 $$ LANGUAGE sql;
 
--- 2. get_trending_feed — sorted by pull_count
+-- 2. get_trending_feed - sorted by pull_count
 CREATE OR REPLACE FUNCTION get_trending_feed(
   p_limit int DEFAULT 20,
   p_offset int DEFAULT 0,
@@ -317,7 +317,7 @@ AS $$
   LIMIT p_limit OFFSET p_offset;
 $$ LANGUAGE sql STABLE;
 
--- 3. get_discovery_feed — low-pull hidden gems
+-- 3. get_discovery_feed - low-pull hidden gems
 CREATE OR REPLACE FUNCTION get_discovery_feed(
   p_limit int DEFAULT 20,
   p_offset int DEFAULT 0,
@@ -345,7 +345,7 @@ AS $$
   LIMIT p_limit OFFSET p_offset;
 $$ LANGUAGE sql STABLE;
 
--- 4. get_platform_stats — agents and constructs only
+-- 4. get_platform_stats - agents and constructs only
 CREATE OR REPLACE FUNCTION get_platform_stats()
 RETURNS TABLE (agent_count bigint, construct_count bigint)
 AS $$
@@ -354,7 +354,7 @@ AS $$
     (SELECT COUNT(*) FROM constructs WHERE deleted_at IS NULL AND status = 'approved') AS construct_count;
 $$ LANGUAGE sql STABLE;
 
--- 5. get_tag_counts — tag frequency across all constructs
+-- 5. get_tag_counts - tag frequency across all constructs
 CREATE OR REPLACE FUNCTION get_tag_counts()
 RETURNS TABLE (
   tag text,
@@ -370,7 +370,7 @@ AS $$
   ORDER BY count DESC, tag ASC;
 $$ LANGUAGE sql STABLE;
 
--- 6. get_developer_construct_count — count constructs for a developer
+-- 6. get_developer_construct_count - count constructs for a developer
 CREATE OR REPLACE FUNCTION get_developer_construct_count(p_developer_id uuid)
 RETURNS int AS $$
 BEGIN
@@ -384,13 +384,13 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql STABLE;
 
--- 7. increment_pull_count — atomic pull count increment with dedup handled by caller
+-- 7. increment_pull_count - atomic pull count increment with dedup handled by caller
 CREATE OR REPLACE FUNCTION increment_pull_count(p_construct_id uuid)
 RETURNS void AS $$
   UPDATE constructs SET pull_count = pull_count + 1 WHERE id = p_construct_id;
 $$ LANGUAGE sql;
 
--- 9. check_construct_duplicate — returns true if near-duplicate exists
+-- 9. check_construct_duplicate - returns true if near-duplicate exists
 CREATE OR REPLACE FUNCTION check_construct_duplicate(p_embedding vector(1536))
 RETURNS boolean AS $$
   SELECT EXISTS (

@@ -80,7 +80,7 @@ export function FeedbackModal({ onClose }: { onClose: () => void }) {
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="What's on your mind? Bug reports, feature requests, general thoughts — all welcome."
+                placeholder="What's on your mind? Bug reports, feature requests, general thoughts - all welcome."
                 className="w-full h-36 px-4 py-3 bg-[#050505] border border-white/10 rounded-xl text-base text-zinc-100 placeholder:text-zinc-500 font-sans leading-relaxed resize-none focus:outline-none focus:border-white/20 transition-all"
                 maxLength={2000}
                 disabled={status === "sending"}
