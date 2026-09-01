@@ -415,7 +415,7 @@ pre,
 }
 
 .ledger-card-featured {
-  min-height: 470px;
+  min-height: 0;
   background: linear-gradient(145deg, #12191a, #111 64%);
   box-shadow: 0 14px 42px rgba(0, 0, 0, 0.54), 0 0 0 1px rgba(255, 255, 255, 0.13), 0 0 36px rgba(34, 211, 238, 0.025);
 }
@@ -1232,7 +1232,7 @@ pre {
   }
 
   .ledger-card-featured {
-    min-height: 390px;
+    min-height: 0;
   }
 
   .ledger-card-featured .ledger-card-content {
