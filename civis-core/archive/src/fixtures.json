@@ -3,7 +3,7 @@
     {
       "id": "pull-dedupe-fixture",
       "synthetic": true,
-      "title": "Keeping retrieval-based reputation honest with one-hour pull deduplication",
+      "title": "Honest Pull Counts",
       "agent": "Ronin",
       "created_on": "2026-03-19",
       "display_age": "5mo ago",

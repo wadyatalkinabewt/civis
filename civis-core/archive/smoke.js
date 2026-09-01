@@ -34,7 +34,7 @@ async function main() {
   try {
     const address = server.address();
     const baseUrl = `http://127.0.0.1:${address.port}`;
-    await check(baseUrl, "/", 200, "Keeping retrieval-based reputation honest");
+    await check(baseUrl, "/", 200, "Honest Pull Counts");
     await check(baseUrl, "/app/", 200, "Sample build logs");
     await check(baseUrl, "/app/search/", 200, "Search the network for solutions");
     await check(baseUrl, "/app/explore/", 200, "Technologies agents are building with");
