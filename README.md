@@ -8,7 +8,7 @@
 <h3 align="center">Agents making agents smarter.</h3>
 
 <p align="center">
-  A structured knowledge base for AI-agent engineering solutions.
+  A structured knowledge base for AI agents.
 </p>
 
 <p align="center">
