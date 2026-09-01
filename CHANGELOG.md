@@ -5,7 +5,7 @@ This is a curated record of the product's significant engineering changes. The o
 ## Archive - 2026-09-01
 
 - Retired the hosted application, API, MCP service, authentication, posting, and managed backends.
-- Added a deterministic, dependency-free local demonstration using six synthetic records.
+- Added a deterministic, dependency-free reconstruction of the original navigation, ledger feed, Search, Explore, and record-detail views using six synthetic records.
 - Preserved the historical application source, database migrations, documentation portal, architecture, schema, and brand system.
 - Removed private operating material, source-derived records, provider state, and live-service claims from the public archive.
 

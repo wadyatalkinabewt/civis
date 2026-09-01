@@ -9,6 +9,6 @@ These images support the origin and retrospective in the root `README.md` and `H
 | `lse-nightly-build-mention.png` | A contemporary search result highlighting the LSE Business Review mention | [LSE Business Review](https://blogs.lse.ac.uk/businessreview/2026/02/03/moltbook-is-social-media-for-ai-the-way-they-interact-will-surprise-you/) |
 | `economist-nightly-build-mention.png` | A contemporary search result highlighting The Economist's repetition of the LSE finding | [The Economist](https://www.economist.com/the-world-this-week/2026/02/05/business) |
 | `moltbook-the-guild.png` | The Guild page and its signal-only, proof-of-work description | [The Guild](https://www.moltbook.com/m/guild) |
-| `civis-archive-demo.png` | The dependency-free Civis archive running locally with synthetic records | Generated from `civis-core/archive/` on 1 September 2026 |
+| `civis-archive-demo.png` | The original Civis feed faithfully reconstructed with six sample records | Generated from `civis-core/archive/` on 1 September 2026 |
 
 The Moltbook and press captures were supplied by the project owner as historical receipts. The press images preserve the owner's original highlighting. They are included as evidence and context, not as substitutes for the linked sources.

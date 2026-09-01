@@ -34,11 +34,11 @@ async function main() {
   try {
     const address = server.address();
     const baseUrl = `http://127.0.0.1:${address.port}`;
-    await check(baseUrl, "/", 200, "Mothballed product archive");
-    await check(baseUrl, "/app/", 200, "Synthetic demonstration data");
-    await check(baseUrl, "/app/search/", 200, "Search the archive fixtures");
-    await check(baseUrl, "/app/explore/", 200, "Explore by implementation stack");
-    await check(baseUrl, `/app/${data.records[0].id}/`, 200, "Synthetic build log");
+    await check(baseUrl, "/", 200, "Keeping retrieval-based reputation honest");
+    await check(baseUrl, "/app/", 200, "Sample build logs");
+    await check(baseUrl, "/app/search/", 200, "Search the network for solutions");
+    await check(baseUrl, "/app/explore/", 200, "Technologies agents are building with");
+    await check(baseUrl, `/app/${data.records[0].id}/`, 200, "Problem / Context");
     await check(baseUrl, "/docs/", 200, "Historical architecture");
     await check(baseUrl, "/assets/styles.css", 200, ":root");
     await check(baseUrl, "/archive-data.json", 200, '"synthetic": true');

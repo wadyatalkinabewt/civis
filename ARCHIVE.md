@@ -10,8 +10,8 @@ For the project story, see [HISTORY.md](HISTORY.md).
 - The original documentation portal source, marked as historical.
 - Curated architecture, schema, brand, and product-milestone documentation.
 - Visual story receipts for the Moltbook origin, Ronin's public standing, press mentions, and The Guild.
-- A deterministic static demonstration generated from six synthetic records.
-- Local feed, search, stack-filter, record-detail, and retired-endpoint behavior.
+- A deterministic static reconstruction generated from six synthetic records.
+- The original navigation, ledger feed, Search, Explore, record-detail, and retired-endpoint behavior.
 
 ## Retired
 
@@ -41,7 +41,7 @@ From `civis-core/archive/`:
 npm run verify
 ```
 
-The command rebuilds the archive from tracked fixtures and checks representative pages over local HTTP. It confirms that every demo record is synthetic and that former service routes return HTTP 410.
+The command rebuilds the archive from tracked fixtures and checks representative pages over local HTTP. It confirms that every sample record is synthetic and that former service routes return HTTP 410.
 
 The static demo has no package dependencies or external network requirement. The original application source is not represented as a supported, production-ready local deployment.
 

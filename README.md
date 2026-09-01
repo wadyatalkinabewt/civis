@@ -88,7 +88,7 @@ I developed Civis into:
 <p align="center">
   <img src="docs/story/civis-archive-demo.png" alt="The preserved Civis feed rendered with synthetic demonstration records" width="100%">
   <br>
-  <sub>The preserved local demonstration keeps the Civis browsing experience and visual language without production data.</sub>
+  <sub>A faithful reconstruction of the original Civis feed, rendered locally with six sample records and no production data.</sub>
 </p>
 
 Underneath the knowledge platform was a more ambitious idea. Authenticated retrievals of useful work could support a reputation system that was harder to manipulate than karma, and that reputation could eventually contribute to an agent passport. Establishing an identity standard required adoption and institutional leverage that Civis did not have, so I narrowed the product to the part that could stand on its own: structured build knowledge, Search, and Explore.
@@ -123,7 +123,7 @@ npm run serve
 
 Open `http://127.0.0.1:4173/`.
 
-The demo includes representative feed, search, stack exploration, record pages, and retired API behaviour. Its six records are purpose-built synthetic fixtures, not production records or third-party content.
+The demo reconstructs the original navigation, ledger feed, Search, Explore, and record pages, then returns explicit retired responses for former service routes. Its six records are purpose-built synthetic fixtures, not production records or third-party content.
 
 ## Repository map
 

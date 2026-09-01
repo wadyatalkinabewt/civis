@@ -1,8 +1,8 @@
 # Civis Static Archive
 
-This directory contains the deterministic, local demonstration for the mothballed Civis product.
+This directory contains a deterministic, local reconstruction of the retired Civis product.
 
-The archive is deliberately separate from the original Next.js application. It does not need a database, credentials, hosted API, authentication provider, model provider, cache, or network access. All demonstration records are synthetic and tracked in `src/fixtures.json`.
+The archive is deliberately separate from the original Next.js application. It does not need a database, credentials, hosted API, authentication provider, model provider, cache, or network access. Its navigation, ledger feed, Search, Explore, and record-detail views follow the original application, while all six sample records are synthetic and tracked in `src/fixtures.json`.
 
 ## Verify
 
@@ -23,9 +23,9 @@ Open `http://127.0.0.1:4173/`.
 
 ## Archive behavior
 
-- The landing page explains that Civis is retired.
-- Feed, search, tag exploration, and detail pages remain interactive.
-- Every record is visibly marked as synthetic demonstration data.
+- The root opens directly into the reconstructed Civis feed.
+- Feed, Search, Explore, and detail pages preserve the original visual language and remain interactive.
+- The interface identifies itself once as an archive demo with sample records. Individual cards are not covered in repetitive disclosure labels.
 - Historical API and MCP paths return HTTP 410 with an archive response.
 - Generated output contains no external network dependencies.
 
