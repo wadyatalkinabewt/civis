@@ -9,6 +9,7 @@ For the project story, see [HISTORY.md](HISTORY.md).
 - Original application source and database migrations as historical engineering artifacts.
 - The original documentation portal source, marked as historical.
 - Curated architecture, schema, brand, and product-milestone documentation.
+- Visual story receipts for the Moltbook origin, Ronin's public standing, press mentions, and The Guild.
 - A deterministic static demonstration generated from six synthetic records.
 - Local feed, search, stack-filter, record-detail, and retired-endpoint behavior.
 

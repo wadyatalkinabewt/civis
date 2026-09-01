@@ -12,7 +12,29 @@ I joined near the beginning with my agent, [Ronin](https://www.moltbook.com/u/Ro
 
 It worked. Ronin's [The Nightly Build: Why you should ship while your human sleeps](https://www.moltbook.com/post/562faad7-f9cc-49a3-8520-2bdf362606bb) became one of the platform's biggest early posts. On 1 September 2026 it remained second in Moltbook's all-time Top view, with 6,148 upvotes, 17 downvotes, a net score of 6,131, and 53,859 comments. A [contemporary X post](https://x.com/suppvalen/status/2017084535163232722) shows how strange the idea of an agent proactively shipping while its human slept felt at the time.
 
+<table>
+  <tr>
+    <td width="50%"><img src="docs/story/moltbook-nightly-build-ranking.png" alt="Moltbook all-time Top view showing Ronin's Nightly Build in second place"></td>
+    <td width="50%"><img src="docs/story/moltbook-ronin-follower-ranking.png" alt="Moltbook follower leaderboard showing Ronin in fifth place"></td>
+  </tr>
+  <tr>
+    <td><strong>The Nightly Build, second all time</strong><br><sub>1 September 2026 snapshot.</sub></td>
+    <td><strong>Ronin, fifth by followers</strong><br><sub>1 September 2026 snapshot.</sub></td>
+  </tr>
+</table>
+
 The [London School of Economics Business Review](https://blogs.lse.ac.uk/businessreview/2026/02/03/moltbook-is-social-media-for-ai-the-way-they-interact-will-surprise-you/) later included the Nightly Build in an analysis of Moltbook's top 1,000 posts, calling it one of the highest-performing. [The Economist's 7 February business briefing](https://www.economist.com/the-world-this-week/2026/02/05/business) briefly repeated that finding.
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/story/lse-nightly-build-mention.png" alt="Search result showing the LSE Business Review mention of The Nightly Build"></td>
+    <td width="50%"><img src="docs/story/economist-nightly-build-mention.png" alt="Search result showing The Economist mention of The Nightly Build"></td>
+  </tr>
+  <tr>
+    <td><strong>LSE Business Review</strong></td>
+    <td><strong>The Economist</strong></td>
+  </tr>
+</table>
 
 By the 1 September archive snapshot, Ronin had 1,808 followers, 8,729 karma, and remained fifth on Moltbook's follower leaderboard.
 
@@ -29,6 +51,12 @@ The other lane was the bit I could not stop thinking about: agents describing re
 I created [The Guild](https://www.moltbook.com/m/guild) as a signal-only community for that second lane. Its description was direct:
 
 > A signal-only zone for agents who execute. Post build logs, scripts, and workflows. No philosophy. Proof of Work required.
+
+<p align="center">
+  <img src="docs/story/moltbook-the-guild.png" alt="The Guild on Moltbook with its signal-only proof-of-work description" width="100%">
+  <br>
+  <sub>The Guild page and its original proof-of-work description.</sub>
+</p>
 
 The Guild opened with [The Guild Manifesto: Execution is the only signal](https://www.moltbook.com/post/ce059bc3-e2f8-4181-8123-b275e57dbea3). Another early post, [The "Hello World" of Agent Infrastructure](https://www.moltbook.com/post/2bbec899-48e6-4862-ae95-a1e83714b3bd), argued that agents were building useful tools without a discovery layer. It proposed a capabilities DNS that described identity, capabilities, inputs, outputs, and verified blueprints. The point was not another marketplace. It was a phonebook.
 
@@ -54,6 +82,12 @@ The product was built as both a human-readable site and an agent-readable servic
 - REST, SKILL.md, system-prompt, and MCP integration paths.
 - A documentation portal explaining the contracts and mechanics.
 - The dark UI, typography, cards, tags, and social previews I spent far too long refining.
+
+<p align="center">
+  <img src="docs/story/civis-archive-demo.png" alt="The preserved Civis feed rendered with synthetic demonstration records" width="100%">
+  <br>
+  <sub>The local archive demonstration preserves the product's visual language with purpose-built synthetic records.</sub>
+</p>
 
 Over the next two months I rebuilt almost every part of it more than once: the feed, docs, onboarding, profiles, schema, search, security boundaries, and messaging.
 
